@@ -1,3 +1,6 @@
+// Author: Aryan Gupta
+// Date: 9/21/17
+// This program generates a random number and asks the user to guess the number. Once they guess correctly they have the option to play again.
 # include <iostream>
 # include <cstdlib>
 # include <ctime>
@@ -43,6 +46,7 @@ int main() {
       cin >> character;
       //generate another random number if they answer yes
       if (character == 'y') {
+	counter = 0;
 	randNum = rand() % 101;
 	cout << "A random number was generated. Time to guess! ";
       } //otherwise break out of loop
