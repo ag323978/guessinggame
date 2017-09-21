@@ -12,8 +12,6 @@ int main() {
   srand(time(NULL));
   
   int randNum = rand() % 101;
-
-  cout << randNum << endl;
   
   cout << "A random number was generated. Time to guess! ";
 
@@ -32,12 +30,13 @@ int main() {
 	cout << "It took you " << counter << " guesses." << endl;
       }
       cout << "Do you want to play again? Type y/n: ";
-      cin >> input;
-      if (input == 'y') {
+      char character;
+      cin >> character;
+      if (character == 'y') {
 	randNum = rand() % 101;
 	cout << "A random number was generated. Time to guess! ";
       } else {
-	return false;
+	break;
       }
     } 
   }
